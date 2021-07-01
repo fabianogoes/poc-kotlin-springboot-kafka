@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    bootstrap-servers: 51.158.114.56:9092
+    consumer:
+      group-id: tpd-loggers
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      max-poll-records: 1
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+app:
+  topic-name: advice-topic
+  messages-per-request: 10
