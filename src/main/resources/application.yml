@@ -2,7 +2,7 @@ spring:
   kafka:
     bootstrap-servers: 51.158.114.56:9092
     consumer:
-      group-id: tpd-loggers
+      group-id: log-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -17,5 +17,5 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 app:
-  topic-name: advice-topic
+  topic-name: LOG_TOPIC
   messages-per-request: 10

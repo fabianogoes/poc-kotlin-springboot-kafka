@@ -1,0 +1,21 @@
+spring:
+  config:
+    activate:
+      on-profile: cloudkarafka
+  kafka:
+    bootstrap-servers: ${CLOUDKARAFKA_URL}
+    producer:
+      properties:
+        news-topic: ${CLOUDKARAFKA_USERNAME}-news.json
+        alert-topic: ${CLOUDKARAFKA_USERNAME}-alert.json
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: SCRAM-SHA-256
+        jaas:
+          config: org.apache.kafka.common.security.scram.ScramLoginModule required username="${CLOUDKARAFKA_USERNAME}" password="${CLOUDKARAFKA_PASSWORD}";
+
+app:
+  topic-name: ${CLOUDKARAFKA_USERNAME}-LOG_TOPIC
+  messages-per-request: 1

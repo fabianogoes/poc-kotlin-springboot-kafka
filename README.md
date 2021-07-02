@@ -36,6 +36,7 @@ spring:
 - [Spring Boot + Apache Kafka Hello World Example](https://www.javainuse.com/spring/spring-boot-apache-kafka-hello-world)
 - [Configure Kafka Producer and Consumer in spring boot](https://codingnconcepts.com/spring-boot/configure-kafka-producer-and-consumer)
 - [Spring Boot Kafka JsonSerializer Example](https://howtodoinjava.com/kafka/spring-boot-jsonserializer-example/)
+- [Spring Kafka – Adding Custom Header to Kafka Message Example](https://memorynotfound.com/spring-kafka-adding-custom-header-kafka-message-example)
 
 
 ## Problem

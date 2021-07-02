@@ -11,9 +11,8 @@ class HelloKafkaController(
 ) {
     private val logger: Logger = LoggerFactory.getLogger(HelloKafkaController::class.java)
 
-
-    @GetMapping("/hello")
-    fun hello(): String? {
+    @GetMapping("/event")
+    fun event(): String? {
         logger.info("Sending message to Kafka")
         val payload = MessagePayload(message = "Spring Kafka and Spring Boot Configuration Example")
         kafkaSender.send(payload)
